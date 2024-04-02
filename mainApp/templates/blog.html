@@ -1,0 +1,435 @@
+{%extends "index.html"%}
+{%load static%}
+{%block body%}
+
+      <!-- Page Header End -->
+      <div class="container-xxl py-5 page-header position-relative mb-5">
+        <div class="container py-5">
+          <h1 class="display-2 text-white animated slideInDown mb-4">Blog</h1>
+        </div>
+      </div>
+      <!-- Page Header End -->
+
+      <!-- Classes Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px">
+            <h1 class="mb-3">Blog</h1>
+          </div>
+          <div class="row g-4">
+            
+            {%for i in blogdata%}
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="classes-item">
+                <div class="bg-light rounded-circle w-100 mx-auto p-0">
+                  <img class="img-fluid" src="{{i.image.url}}" alt="" />
+                </div>
+                <div
+                  class="bg-light rounded p-4 pt-5 mt-n5"
+                  style="padding-top: 4rem !important">
+                  <div
+                    class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <h4>{{i.title|slice:":50"}}</h4>
+                    </div>
+                  </div>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      text-align: justify;
+                      line-height: 1.5rem;
+                    ">
+                    {{i.conclusion|slice:":120"}}
+                  </p>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div
+                        class="blog-page-list border-top border-3 border-primary pt-2">
+                        <div class="col-sm-4">
+                          <a
+                            class="btn py-2 px-3"
+                            style="
+                              background-color: #005e33;
+                              color: white;
+                              border-radius: 0px;
+                            "
+                            href="/blog-single/{{i.id}}"
+                            >Read More</a
+                          >
+                        </div>
+                        <div class="col-sm-8">
+                          <small>{{i.date}} - by Admin</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {%endfor%}
+
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="classes-item">
+                <div class="bg-light rounded-circle w-100 mx-auto p-0">
+                  <img class="img-fluid" src="{%static 'img/news-1.png'%}" alt="" />
+                </div>
+                <div
+                  class="bg-light rounded p-4 pt-5 mt-n5"
+                  style="padding-top: 4rem !important">
+                  <div
+                    class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <h4>Time to Talk Day – February 6, 2024</h4>
+                    </div>
+                  </div>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      text-align: justify;
+                      line-height: 1.5rem;
+                    ">
+                    Time to Talk Day is on February 6, 2024. It's a global
+                    initiative that encourages people to be open and honest
+                    about mental health. The day aims to break the stigma around
+                    mental health and encourage people to speak up, seek help,
+                    and support one another.
+                  </p>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div
+                        class="blog-page-list border-top border-3 border-primary pt-2">
+                        <div class="col-sm-4">
+                          <a
+                            class="btn py-2 px-3"
+                            style="
+                              background-color: #005e33;
+                              color: white;
+                              border-radius: 0px;
+                            "
+                            href=""
+                            >Read More</a
+                          >
+                        </div>
+                        <div class="col-sm-8">
+                          <small>06 February, 2024 - by Admin</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="classes-item">
+                <div class="bg-light rounded-circle w-100 mx-auto p-0">
+                  <img class="img-fluid" src="{%static 'img/news-1.png'%}" alt="" />
+                </div>
+                <div
+                  class="bg-light rounded p-4 pt-5 mt-n5"
+                  style="padding-top: 4rem !important">
+                  <div
+                    class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <h4>Time to Talk Day – February 6, 2024</h4>
+                    </div>
+                  </div>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      text-align: justify;
+                      line-height: 1.5rem;
+                    ">
+                    Time to Talk Day is on February 6, 2024. It's a global
+                    initiative that encourages people to be open and honest
+                    about mental health. The day aims to break the stigma around
+                    mental health and encourage people to speak up, seek help,
+                    and support one another.
+                  </p>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div
+                        class="blog-page-list border-top border-3 border-primary pt-2">
+                        <div class="col-sm-4">
+                          <a
+                            class="btn py-2 px-3"
+                            style="
+                              background-color: #005e33;
+                              color: white;
+                              border-radius: 0px;
+                            "
+                            href=""
+                            >Read More</a
+                          >
+                        </div>
+                        <div class="col-sm-8">
+                          <small>06 February, 2024 - by Admin</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="classes-item">
+                <div class="bg-light rounded-circle w-100 mx-auto p-0">
+                  <img class="img-fluid" src="{%static 'img/news-1.png'%}" alt="" />
+                </div>
+                <div
+                  class="bg-light rounded p-4 pt-5 mt-n5"
+                  style="padding-top: 4rem !important">
+                  <div
+                    class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <h4>Time to Talk Day – February 6, 2024</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div
+                        class="blog-page-list border-top border-3 border-primary pt-2">
+                        <div class="col-sm-4">
+                          <a
+                            class="btn py-2 px-3"
+                            style="
+                              background-color: #005e33;
+                              color: white;
+                              border-radius: 0px;
+                            "
+                            href=""
+                            >Read More</a
+                          >
+                        </div>
+                        <div class="col-sm-8">
+                          <small>06 February, 2024 - by Admin</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="classes-item">
+                <div class="bg-light rounded-circle w-100 mx-auto p-0">
+                  <img class="img-fluid" src="{%static 'img/news-1.png'%}" alt="" />
+                </div>
+                <div
+                  class="bg-light rounded p-4 pt-5 mt-n5"
+                  style="padding-top: 4rem !important">
+                  <div
+                    class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <h4>Time to Talk Day – February 6, 2024</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div
+                        class="blog-page-list border-top border-3 border-primary pt-2">
+                        <div class="col-sm-4">
+                          <a
+                            class="btn py-2 px-3"
+                            style="
+                              background-color: #005e33;
+                              color: white;
+                              border-radius: 0px;
+                            "
+                            href=""
+                            >Read More</a
+                          >
+                        </div>
+                        <div class="col-sm-8">
+                          <small>06 February, 2024 - by Admin</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="classes-item">
+                <div class="bg-light rounded-circle w-100 mx-auto p-0">
+                  <img class="img-fluid" src="{%static 'img/news-1.png'%}" alt="" />
+                </div>
+                <div
+                  class="bg-light rounded p-4 pt-5 mt-n5"
+                  style="padding-top: 4rem !important">
+                  <div
+                    class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <h4>Time to Talk Day – February 6, 2024</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div
+                        class="blog-page-list border-top border-3 border-primary pt-2">
+                        <div class="col-sm-4">
+                          <a
+                            class="btn py-2 px-3"
+                            style="
+                              background-color: #005e33;
+                              color: white;
+                              border-radius: 0px;
+                            "
+                            href=""
+                            >Read More</a
+                          >
+                        </div>
+                        <div class="col-sm-8">
+                          <small>06 February, 2024 - by Admin</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="classes-item">
+                <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/news-2.jpg'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center">
+                      <h4>EdTech Trends , Education , Education Technology</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <h6
+                          class="text-primary mb-1"
+                          style="color: #005e33 !important">
+                          International Day of Zero Tolerance to Female Genital
+                          Mutilation – February 6, 2024
+                        </h6>
+                        <small>06 February, 2024 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="classes-item">
+                <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/news-3.jpg'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center">
+                      <h4>EdTech Trends , Education , Education Technology</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <h6
+                          class="text-primary mb-1"
+                          style="color: #005e33 !important">
+                          Conservatorship and Guardianship Abuse Awareness Day –
+                          February 1, 2024
+                        </h6>
+                        <small>01 February, 2024 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="classes-item">
+                <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/news-4.jpg'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center">
+                      <h4>EdTech Trends , Education , Education Technology</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <h6
+                          class="text-primary mb-1"
+                          style="color: #005e33 !important">
+                          HISTORY OF ABOLITION OF SLAVERY DAY February 1, 2024
+                        </h6>
+                        <small>01 February, 2024 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="classes-item">
+                <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/news-5.jpg'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center">
+                      <h4>EdTech Trends , Education , Education Technology</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <h6
+                          class="text-primary mb-1"
+                          style="color: #005e33 !important">
+                          World Television Day – November 21, 2023
+                        </h6>
+                        <small>21 November, 2023 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="classes-item">
+                <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/news-6.jpg'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center">
+                      <h4>EdTech Trends , Education , Education Technology</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <h6
+                          class="text-primary mb-1"
+                          style="color: #005e33 !important">
+                          National Entrepreneur's Day – November 21, 2023
+                        </h6>
+                        <small>21 November, 2023 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- Classes End -->
+
+      {%endblock%}

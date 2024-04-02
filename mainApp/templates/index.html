@@ -1,0 +1,1308 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Delhi Public International School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="{%static 'img/favicon.ico'%}" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="{%static 'lib/animate/animate.min.css'%}" rel="stylesheet" />
+    <link href="{%static 'lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous" />
+    <link href="{%static 'css/bootstrap.min.css'%}" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="{%static 'css/style.css'%}" rel="stylesheet " />
+    <style>
+      video::-webkit-media-controls {
+        display: none;
+      }
+
+      /* Could Use thise as well for Individual Controls */
+      video::-webkit-media-controls-play-button {
+      }
+
+      video::-webkit-media-controls-volume-slider {
+      }
+
+      video::-webkit-media-controls-mute-button {
+      }
+
+      video::-webkit-media-controls-timeline {
+      }
+
+      video::-webkit-media-controls-current-time-display {
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-xxl bg-white p-0">
+      <!-- Automatically modal open -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div
+          class="modal-dialog"
+          style="
+            max-width: 43%;
+            font-size: 0.9rem;
+            line-height: 1.7rem;
+            word-spacing: 1px;
+            font-family: system-ui;
+            letter-spacing: 0.3px;
+            text-align: justify;
+          ">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Disclaimer
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                "DELHI PUBLIC INTERNATIONAL SCHOOL" holds a trademark that is
+                distinct from "DELHI PUBLIC SCHOOL" and "DELHI WORLD PUBLIC
+                SCHOOL." It emphasises that the use of "DELHI PUBLIC
+                INTERNATIONAL SCHOOL" does not infringe upon or imply any
+                affiliation with "DELHI PUBLIC SCHOOL" or "DELHI WORLD PUBLIC
+                SCHOOL." It also mentions that all trademarks, logos, and brands
+                referred to on the website of DELHI PUBLIC INTERNATIONAL SCHOOL
+                are the property of DELHI PUBLIC INTERNATIONAL SCHOOL and its
+                trademark holders. It clarifies that DELHI PUBLIC INTERNATIONAL
+                SCHOOL is a separate educational institution with no connection
+                to "DELHI PUBLIC SCHOOL," "DELHI WORLD PUBLIC SCHOOL," or any
+                other institution with similar names. This disclaimer is
+                intended to prevent confusion and protect the distinct identity
+                and intellectual property of DELHI PUBLIC INTERNATIONAL SCHOOL.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Automatically modal ends -->
+      <!-- Spinner Start -->
+      <!-- <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div> -->
+      <!-- Spinner End -->
+
+      <!-- Navbar Start -->
+      <nav
+        class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+        <a href="index" class="navbar-brand">
+          <img src="{%static 'img/logo.png'%}" alt="" width="100px" />
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav mx-auto" style="font-size: 0.9rem">
+            <a href="/" class="nav-item nav-link active">Home</a>
+            <a href="/about" class="nav-item nav-link">About Us</a>
+            <a href="/faq" class="nav-item nav-link">FAQ</a>
+            <a href="/admission" class="nav-item nav-link">Admission</a>
+            <a href="/location" class="nav-item nav-link"
+              >School's Partner</a
+            >
+            <a href="/event" class="nav-item nav-link">Events</a>
+            <a href="/blog" class="nav-item nav-link">Blog</a>
+            <a href="/contact" class="nav-item nav-link">Contact Us</a>
+            <a href="/student" class="nav-item nav-link"
+              >Parent / Student Login</a
+            >
+            <a href="/schoollogin" class="nav-item nav-link"
+              >School Login</a
+            >
+            <a href="/paynow" class="nav-item nav-link">Paynow</a>
+          </div>
+        </div>
+        <a href="index" class="navbar-brand">
+          <img src="{%static 'img/logo.jpg'%}" alt="" width="100px" />
+        </a>
+      </nav>
+      <!-- Navbar End -->
+
+
+      {%block body%}
+
+      <div class="video" style="margin: auto">
+        <video
+          src="{%static 'video/banner-video.mp4'%}"
+          controls
+          autoplay
+          loop
+          width="100%"></video>
+        <!-- <video width="100%" autoplay="autoplay">
+          <source src="video/banner-video.mp4" type="video/mp4" />
+        </video> -->
+      </div>
+
+      <!-- Carousel Start -->
+      <div class="container-fluid p-0 mb-5" style="margin-top: -7px">
+        <div class="owl-carousel header-carousel position-relative">
+          <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="{%static 'img/banner-1.webp'%}" alt="" />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+              style="background: rgba(0, 0, 0, 0.2)">
+              <div class="container">
+                <div class="row justify-content-start">
+                  <div class="col-10 col-lg-8">
+                    <h1 class="display-2 text-white animated slideInDown mb-4">
+                      Welcome To DPIS
+                    </h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                      Delhi Public Intrenational School we Encourage Children to
+                      Develop Their Potential as Lifelong Learners
+                    </p>
+                    <a
+                      href=""
+                      class="btn rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft"
+                      style="background-color: #005e33; color: white"
+                      >Learn More</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="{%static 'img/banner-2.webp'%}" alt="" />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+              style="background: rgba(0, 0, 0, 0.2)">
+              <div class="container">
+                <div class="row justify-content-start">
+                  <div class="col-10 col-lg-8">
+                    <h1 class="display-2 text-white animated slideInDown mb-4">
+                      DPIS: Shaping Bright Minds
+                    </h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                      Established in 1949 as Naveen Bharat, Delhi Public
+                      International School (DPIS) has grown into a diverse
+                      family of 200+ schools.
+                    </p>
+                    <a
+                      href=""
+                      class="btn rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft"
+                      style="background-color: #005e33; color: white"
+                      >Learn More</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="{%static 'img/banner-3.webp'%}" alt="" />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+              style="background: rgba(0, 0, 0, 0.2)">
+              <div class="container">
+                <div class="row justify-content-start">
+                  <div class="col-10 col-lg-8">
+                    <h1 class="display-2 text-white animated slideInDown mb-4">
+                      DPIS: Inspire. Shape. Excel.
+                    </h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                      Delhi Public International School (DPIS) - where
+                      inspiration meets education, shaping a future of
+                      excellence. Join us on this inspiring journey.
+                    </p>
+                    <a
+                      href=""
+                      class="btn rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft"
+                      style="background-color: #005e33; color: white"
+                      >Learn More</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel End -->
+
+      <!-- Facilities Start -->
+      <!-- <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px">
+            <h1 class="mb-3">School Facilities</h1>
+            <p>
+              Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
+              dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed
+              rebum vero dolor duo.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="facility-item">
+                <div class="facility-icon bg-primary">
+                  <span class="bg-primary"></span>
+                  <i class="fa fa-bus-alt fa-3x text-primary"></i>
+                  <span class="bg-primary"></span>
+                </div>
+                <div class="facility-text bg-primary">
+                  <h3 class="text-primary mb-3">School Bus</h3>
+                  <p class="mb-0">
+                    Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero
+                    ipsum sit
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="facility-item">
+                <div class="facility-icon bg-success">
+                  <span class="bg-success"></span>
+                  <i class="fa fa-futbol fa-3x text-success"></i>
+                  <span class="bg-success"></span>
+                </div>
+                <div class="facility-text bg-success">
+                  <h3 class="text-success mb-3">Playground</h3>
+                  <p class="mb-0">
+                    Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero
+                    ipsum sit
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="facility-item">
+                <div class="facility-icon bg-warning">
+                  <span class="bg-warning"></span>
+                  <i class="fa fa-home fa-3x text-warning"></i>
+                  <span class="bg-warning"></span>
+                </div>
+                <div class="facility-text bg-warning">
+                  <h3 class="text-warning mb-3">Healthy Canteen</h3>
+                  <p class="mb-0">
+                    Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero
+                    ipsum sit
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+              <div class="facility-item">
+                <div class="facility-icon bg-info">
+                  <span class="bg-info"></span>
+                  <i class="fa fa-chalkboard-teacher fa-3x text-info"></i>
+                  <span class="bg-info"></span>
+                </div>
+                <div class="facility-text bg-info">
+                  <h3 class="text-info mb-3">Positive Learning</h3>
+                  <p class="mb-0">
+                    Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero
+                    ipsum sit
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- Facilities End -->
+
+      <!-- About Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <marquee behavior="" direction="" scrollamount="10">
+              <p style="color: #dc3545 !important; font-size: 0.9rem">
+                Disclaimer: It highlights that "DELHI PUBLIC INTERNATIONAL
+                SCHOOL" has its own distinct trademark, separate from the other
+                institutions mentioned. This indicates that they have registered
+                and legally own their school name, which is an important point
+                to prevent any potential trademark infringement. Disclaimer: The
+                disclaimer makes it clear that the use of "DELHI PUBLIC
+                INTERNATIONAL SCHOOL" does not imply any affiliation with or
+                infringement upon the names "DELHI PUBLIC SCHOOL" or "DELHI
+                WORLD PUBLIC SCHOOL." This helps to avoid any confusion among
+                the public or stakeholders about the relationships between these
+                institutions. The disclaimer mentions that all trademarks,
+                logos, and brands on the website of DELHI PUBLIC INTERNATIONAL
+                SCHOOL are the property of DELHI PUBLIC INTERNATIONAL SCHOOL and
+                its trademark holders. This underscores their ownership of their
+                intellectual property, including logos and brand-related
+                materials.
+              </p>
+            </marquee>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+              <h1 class="mb-4">Who We Are</h1>
+              <p
+                style="
+                  text-align: justify;
+                  font-size: 1rem;
+                  line-height: 1.7rem;
+                  letter-spacing: 0.1px;
+                ">
+                The foundation stone of education was laid in 1956 by Dr. S.
+                Radhakrishnan, who was the Vice President of India at that time.
+              </p>
+              <p
+                class="mb-4"
+                style="
+                  text-align: justify;
+                  font-size: 1rem;
+                  line-height: 1.7rem;
+                  letter-spacing: 0.1px;
+                ">
+                In 1976, the first branch of DPIS was established in India, This
+                marked the beginning of the school's expansion. The passage
+                mentions that the growth of DPIS is a testament to the strength
+                of the brand and the management behind it. This suggests that
+                DPIS has a strong reputation in the field of education.
+              </p>
+              <p
+                style="
+                  text-align: justify;
+                  font-size: 1rem;
+                  line-height: 1.7rem;
+                  letter-spacing: 0.1px;
+                ">
+                The passage emphasizes the school's commitment to excellence,
+                and it describes the "zest and spirit of excellence" that has
+                remained unchanged throughout the years. The passage concludes
+                by likening the DPIS family to the traditional joint family
+                system in India, perhaps highlighting the sense of unity and
+                shared values among its members. The passage concludes by
+                likening the DPIS family to the traditional joint family system
+                in India, perhaps highlighting the sense of unity and shared
+                values among its members.
+              </p>
+              <div class="row g-4 align-items-center">
+                <div class="col-sm-6">
+                  <a
+                    class="btn rounded-pill py-3 px-5"
+                    style="background-color: #005e33; color: white"
+                    href=""
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <img
+                    class="img-fluid w-75 rounded-circle bg-light p-3"
+                    src="{%static 'img/about3.webp'%}"
+                    alt="" />
+                </div>
+                <div class="col-6 text-start" style="margin-top: -150px">
+                  <img
+                    class="img-fluid w-100 rounded-circle bg-light p-3"
+                    src="{%static 'img/about2.webp'%}"
+                    alt="" />
+                </div>
+                <div class="col-6 text-end" style="margin-top: -150px">
+                  <img
+                    class="img-fluid w-100 rounded-circle bg-light p-3"
+                    style="height: 100%"
+                    src="{%static 'img/about2.jpg'%}"
+                    alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About End -->
+
+      <!-- Call To Action Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="bg-light rounded" style="padding-top: 60px !important">
+            <div class="row g-0" style="text-align: center">
+              <div
+                class="col-lg-6 wow fadeIn"
+                data-wow-delay="0.1s"
+                style="min-height: 400px">
+                <div class="position-relative h-100">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/sjH_-p-Ijys?si=NVUtbwiGJYUwIt6x"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+              <div
+                class="col-lg-6 wow fadeIn"
+                data-wow-delay="0.1s"
+                style="min-height: 400px">
+                <div class="position-relative h-100">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/Ff6yCdpXYDc?si=WYDgA3_57E_J7vs8"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row g-0" style="text-align: center">
+              <div
+                class="col-lg-6 wow fadeIn"
+                data-wow-delay="0.1s"
+                style="min-height: 400px">
+                <div class="position-relative h-100">
+                  <img src="{%static 'img/pray-1.jpeg" width="100%" />
+                </div>
+              </div>
+              <div
+                class="col-lg-6 wow fadeIn"
+                data-wow-delay="0.1s"
+                style="min-height: 400px">
+                <div class="position-relative h-100">
+                  <img src="{%static 'img/pray-2.jpeg" width="100%" alt="" />
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- Call To Action End -->
+
+      <!-- Latest News Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px">
+            <h1 class="mb-3">Latest News</h1>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/news-6.jpg'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center">
+                      <h4>EdTech Trends , Education , Education Technology</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <h6
+                          class="text-primary mb-1"
+                          style="color: #005e33 !important">
+                          National Entrepreneur's Day – November 21, 2023
+                        </h6>
+                        <small>21 November, 2023 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/news-4.jpg'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center">
+                      <h4>EdTech Trends , Education , Education Technology</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <h6
+                          class="text-primary mb-1"
+                          style="color: #005e33 !important">
+                          HISTORY OF ABOLITION OF SLAVERY DAY February 1, 2024
+                        </h6>
+                        <small>01 February, 2024 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/news-2.jpg'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center">
+                      <h4>EdTech Trends , Education , Education Technology</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <h6
+                          class="text-primary mb-1"
+                          style="color: #005e33 !important">
+                          International Day of Zero Tolerance to Female Genital
+                          Mutilation – February 6, 2024
+                        </h6>
+                        <small>06 February, 2024 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/news-5.jpg'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center">
+                      <h4>EdTech Trends , Education , Education Technology</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <h6
+                          class="text-primary mb-1"
+                          style="color: #005e33 !important">
+                          World Television Day – November 21, 2023
+                        </h6>
+                        <small>21 November, 2023 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/news-1.png'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center">
+                      <h4>
+                        Academic Success , EdTech Trends , Education , Education
+                        Technology
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <h6
+                          class="text-primary mb-1"
+                          style="color: #005e33 !important">
+                          Time to Talk Day – February 6, 2024
+                        </h6>
+                        <small>06 February, 2024 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/news-3.jpg'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center">
+                      <h4>EdTech Trends , Education , Education Technology</h4>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <h6
+                          class="text-primary mb-1"
+                          style="color: #005e33 !important">
+                          Conservatorship and Guardianship Abuse Awareness Day –
+                          February 1, 2024
+                        </h6>
+                        <small>01 February, 2024 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center" style="margin-top: 50px">
+            <a class="butn" href="">View All News</a>
+          </div>
+        </div>
+      </div>
+      <!-- Latest News End -->
+
+      <!-- Events Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px">
+            <h1 class="mb-3">Event</h1>
+          </div>
+          <div class="row g-4">
+            
+            {%for i in eventdata%}
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{{i.image.url}}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center flex-column">
+                      <h4>{{i.title|slice:":30"}}</h4>
+                      <p>
+                        {{i.conclusion|slice:":120"}}
+                      </p>
+                      <div class="mt-3 text-center w-100">
+                        <a class="butn" href="/event-single/{{i.id}}">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <small>{{i.date}} - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {%endfor%}
+            
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/event/1.jpg'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center flex-column">
+                      <h4>Charity Fundraising Gala</h4>
+                      <p>
+                        Host a glamorous evening to raise funds for a charitable
+                        cause. Include silent auctions, live entert...
+                      </p>
+                      <div class="mt-3 text-center w-100">
+                        <a class="butn" href="">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <small>21 November, 2023 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/event/2.webp'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center flex-column">
+                      <h4>Tech Conference</h4>
+                      <p>
+                        Bring together experts and enthusiasts to discuss the
+                        latest trends in technology, showcase innovati...
+                      </p>
+                      <div class="mt-3 text-center w-100">
+                        <a class="butn" href="">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <small>21 November, 2023 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/event/3.webp'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center flex-column">
+                      <h4>Art Exhibition</h4>
+                      <p>
+                        Celebrate local artists by organizing an art exhibition
+                        where they can display their work. Consider...
+                      </p>
+                      <div class="mt-3 text-center w-100">
+                        <a class="butn" href="">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <small>21 November, 2023 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="text-center" style="margin-top: 50px">
+              <a class="butn" href="/event">View All Events</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Events End -->
+
+      <!-- Appointment Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="bg-light rounded">
+            <div class="row g-0">
+              <div class="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
+                <div
+                  class="h-100 d-flex flex-column justify-content-center p-5">
+                  <h1 class="mb-4">Didn't Find The Answer</h1>
+                  <form>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control border-0"
+                            id="gname"
+                            placeholder="Gurdian Name" />
+                          <label for="gname">Your Name</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-floating">
+                          <input
+                            type="email"
+                            class="form-control border-0"
+                            id="gmail"
+                            placeholder="Gurdian Email" />
+                          <label for="gmail">Your Email</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control border-0"
+                            id="cname"
+                            placeholder="Your Phone Number" />
+                          <label for="cname">Your Phone Number</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-floating">
+                          <textarea
+                            class="form-control border-0"
+                            placeholder="Leave a message here"
+                            id="message"
+                            style="height: 100px"></textarea>
+                          <label for="message">Message</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button
+                          class="btn w-100 py-3"
+                          style="background-color: #005e33; color: white"
+                          type="submit">
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- <div
+                class="col-lg-6 wow fadeIn"
+                data-wow-delay="0.5s"
+                style="min-height: 400px">
+                <div class="position-relative h-100">
+                  <img
+                    class="position-absolute w-100 h-100 rounded"
+                    src="{%static 'img/appointment.jpg'%}"
+                    style="object-fit: cover" />
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Appointment End -->
+
+      <!-- Team Start -->
+      <!-- <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px">
+            <h1 class="mb-3">Popular Teachers</h1>
+            <p>
+              Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
+              dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed
+              rebum vero dolor duo.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="team-item position-relative">
+                <img
+                  class="img-fluid rounded-circle w-75"
+                  src="{%static 'img/team-1.jpg'%}"
+                  alt="" />
+                <div class="team-text">
+                  <h3>Full Name</h3>
+                  <p>Designation</p>
+                  <div class="d-flex align-items-center">
+                    <a class="btn btn-square btn-primary mx-1" href=""
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a class="btn btn-square btn-primary mx-1" href=""
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a class="btn btn-square btn-primary mx-1" href=""
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="team-item position-relative">
+                <img
+                  class="img-fluid rounded-circle w-75"
+                  src="{%static 'img/team-2.jpg'%}"
+                  alt="" />
+                <div class="team-text">
+                  <h3>Full Name</h3>
+                  <p>Designation</p>
+                  <div class="d-flex align-items-center">
+                    <a class="btn btn-square btn-primary mx-1" href=""
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a class="btn btn-square btn-primary mx-1" href=""
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a class="btn btn-square btn-primary mx-1" href=""
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="team-item position-relative">
+                <img
+                  class="img-fluid rounded-circle w-75"
+                  src="{%static 'img/team-3.jpg'%}"
+                  alt="" />
+                <div class="team-text">
+                  <h3>Full Name</h3>
+                  <p>Designation</p>
+                  <div class="d-flex align-items-center">
+                    <a class="btn btn-square btn-primary mx-1" href=""
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a class="btn btn-square btn-primary mx-1" href=""
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a class="btn btn-square btn-primary mx-1" href=""
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- Team End -->
+
+      <!-- Testimonial Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px">
+            <h1 class="mb-3">What Parents Say</h1>
+          </div>
+          <div
+            class="owl-carousel testimonial-carousel wow fadeInUp"
+            data-wow-delay="0.1s">
+            <div class="testimonial-item bg-light rounded p-5">
+              <p
+                class="fs-5"
+                style="font-size: 1rem !important; text-align: justify">
+                Attending DPIS has been an enriching experience. The diverse
+                range of courses and extracurricular activities have allowed me
+                to explore my interests and develop valuable skills for the
+                future.
+              </p>
+              <div
+                class="d-flex align-items-center bg-white me-n5"
+                style="border-radius: 50px 0 0 50px">
+                <img
+                  class="img-fluid flex-shrink-0 rounded-circle"
+                  src="{%static 'img/testimonial-2.webp'%}"
+                  style="width: 90px; height: 90px" />
+                <div class="ps-3">
+                  <h3 class="mb-1">Riya Sharma</h3>
+                  <span>Delhi</span>
+                </div>
+                <i
+                  class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+              </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-5">
+              <p
+                class="fs-5"
+                style="font-size: 1rem !important; text-align: justify">
+                I am incredibly impressed with the quality of education and
+                support my child receives at DPIS . The dedicated teachers and
+                nurturing environment have made a positive impact on my child's
+                academic and personal growth.
+              </p>
+              <div
+                class="d-flex align-items-center bg-white me-n5"
+                style="border-radius: 50px 0 0 50px">
+                <img
+                  class="img-fluid flex-shrink-0 rounded-circle"
+                  src="{%static 'img/testimonial-1.webp'%}"
+                  style="width: 90px; height: 90px" />
+                <div class="ps-3">
+                  <h3 class="mb-1">Vinod</h3>
+                  <span>Delhi</span>
+                </div>
+                <i
+                  class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+              </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-5">
+              <p
+                class="fs-5"
+                style="font-size: 1rem !important; text-align: justify">
+                Teaching at DPIS has been a rewarding journey. The school's
+                commitment to fostering a culture of learning and excellence has
+                made it a joy to work with such motivated and talented students.
+              </p>
+              <div
+                class="d-flex align-items-center bg-white me-n5"
+                style="border-radius: 50px 0 0 50px">
+                <img
+                  class="img-fluid flex-shrink-0 rounded-circle"
+                  src="{%static 'img/testimonial-3.webp'%}"
+                  style="width: 90px; height: 90px" />
+                <div class="ps-3">
+                  <h3 class="mb-1">Ranjan Sinha</h3>
+                  <span> Faridabad</span>
+                </div>
+                <i
+                  class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial End -->
+
+      {%endblock%}
+
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
+        data-wow-delay="0.1s">
+        <div class="container py-5">
+          <div class="row g-5" style="justify-content: center">
+            <div class="col-lg-3 col-md-6">
+              <a href="index" class="navbar-brand">
+                <img src="{%static 'img/logo.png'%}" alt="" width="150px" />
+              </a>
+              <p style="color: white; font-size: 0.95rem; margin-top: 10px">
+                DPIS is one of the most established brands in schools.
+              </p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <h3 class="text-white mb-4">Quick Links</h3>
+              <a
+                class="btn btn-link text-white-50"
+                style="
+                  color: white !important;
+                  font-size: 0.95rem;
+                  margin-top: 10px;
+                "
+                href="/about"
+                >About Us</a
+              >
+              <a
+                class="btn btn-link text-white-50"
+                style="
+                  color: white !important;
+                  font-size: 0.95rem;
+                  margin-top: 10px;
+                "
+                href="/faq"
+                >Faq</a
+              >
+              <a
+                class="btn btn-link text-white-50"
+                style="
+                  color: white !important;
+                  font-size: 0.95rem;
+                  margin-top: 10px;
+                "
+                href="/event"
+                >Event</a
+              >
+              <a
+                class="btn btn-link text-white-50"
+                style="
+                  color: white !important;
+                  font-size: 0.95rem;
+                  margin-top: 10px;
+                "
+                href="/blog"
+                >Blog</a
+              >
+              <a
+                class="btn btn-link text-white-50"
+                style="
+                  color: white !important;
+                  font-size: 0.95rem;
+                  margin-top: 10px;
+                "
+                href=""
+                >Franchisee</a
+              >
+            </div>
+            <div
+              class="col-lg-4 col-md-6"
+              style="display: flex; flex-direction: column; gap: 15px">
+              <h3 class="text-white mb-4">Get In Touch</h3>
+              <p
+                class="mb-2"
+                style="color: white !important; font-size: 0.9rem">
+                <i class="fa fa-map-marker-alt me-3"></i>Registered Delhi
+                Address: B- 23, Somdutt Chamber - 2, Bhikaji Cama Palace, New
+                Delhi - 110066
+              </p>
+              <p
+                class="mb-2"
+                style="color: white !important; font-size: 0.9rem">
+                <i class="fa fa-map-marker-alt me-3"></i>Corporate Office
+                Address:215, Suncity Success Tower, Golf Course Ext. Road,
+                Sector 50, Gurugram, Haryana 122102
+              </p>
+              <p
+                class="mb-2"
+                style="color: white !important; font-size: 0.9rem">
+                <i class="fa fa-phone-alt me-3"></i>Phone: +91 7709 092 781
+              </p>
+              <p
+                class="mb-2"
+                style="color: white !important; font-size: 0.9rem">
+                <i class="fa fa-phone-alt me-3"></i>Phone 2: +91 9999 955 847
+              </p>
+              <p
+                class="mb-2"
+                style="color: white !important; font-size: 0.9rem">
+                <i class="fa fa-envelope me-3"></i>Email: info@dpissociety.com
+              </p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All
+                Right Reserved. Designed By
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                  <a href="">Privacy Policy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
+      <button
+        type="button"
+        class="btn btn-primary"
+        style="display: none"
+        data-bs-toggle="modal"
+        id="launch-modal"
+        data-bs-target="#exampleModal"></button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{%static 'lib/wow/wow.min.js'%}"></script>
+    <script src="{%static 'lib/easing/easing.min.js'%}"></script>
+    <script src="{%static 'lib/waypoints/waypoints.min.js'%}"></script>
+    <script src="{%static 'lib/owlcarousel/owl.carousel.min.js'%}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{%static 'js/main.js'%}"></script>
+
+    <script>
+      window.onload = function () {
+        var button = document.getElementById("launch-modal");
+        button.click();
+      };
+    </script>
+  </body>
+</html>

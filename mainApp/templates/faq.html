@@ -1,0 +1,183 @@
+{%extends "index.html"%}
+{%load static%}
+{%block body%}
+
+      <!-- Page Header End -->
+      <div class="container-xxl py-5 page-header position-relative mb-5">
+        <div class="container py-5">
+          <h1 class="display-2 text-white animated slideInDown mb-4">FAQ</h1>
+        </div>
+      </div>
+      <!-- Page Header End -->
+
+      <!-- Events Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px">
+            <h1 class="mb-3">FAQ</h1>
+          </div>
+          <div class="row g-4">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne">
+                    How are teachers selected and trained at DPIS?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>
+                      Our teaching staff undergoes a rigorous selection process
+                      based on qualifications, experience, and a commitment to
+                      our educational philosophy. Continuous professional
+                      development is provided to ensure our educators stay
+                      current with best practices in teaching.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo">
+                    What extracurricular activities are offered at DPIS?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>
+                      DPIS offers a wide range of extracurricular activities,
+                      including sports, arts, clubs, and community service
+                      opportunities. Students can explore their interests and
+                      talents beyond the classroom.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree">
+                    Are there any admission requirements or criteria for
+                    enrolling at DPIS?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>
+                      DPIS follows a comprehensive curriculum that aligns with
+                      national and international educational standards. We
+                      emphasize a well-rounded education that includes
+                      academics, extracurricular activities, and character
+                      development.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Events End -->
+
+      <!-- Appointment Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="bg-light rounded">
+            <div class="row g-0">
+              <div class="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
+                <div
+                  class="h-100 d-flex flex-column justify-content-center p-5">
+                  <h1 class="mb-4">Didn't Find The Answer</h1>
+                  <form>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control border-0"
+                            id="gname"
+                            placeholder="Gurdian Name" />
+                          <label for="gname">Your Name</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-floating">
+                          <input
+                            type="email"
+                            class="form-control border-0"
+                            id="gmail"
+                            placeholder="Gurdian Email" />
+                          <label for="gmail">Your Email</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control border-0"
+                            id="cname"
+                            placeholder="Your Phone Number" />
+                          <label for="cname">Your Phone Number</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-floating">
+                          <textarea
+                            class="form-control border-0"
+                            placeholder="Leave a message here"
+                            id="message"
+                            style="height: 100px"></textarea>
+                          <label for="message">Message</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button
+                          class="btn w-100 py-3"
+                          style="background-color: #005e33; color: white"
+                          type="submit">
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Appointment End -->
+
+      {%endblock%}

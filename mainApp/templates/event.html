@@ -1,0 +1,118 @@
+{%extends "index.html"%}
+{%load static%}
+{%block body%}
+
+      <!-- Page Header End -->
+      <div class="container-xxl py-5 page-header position-relative mb-5">
+        <div class="container py-5">
+          <h1 class="display-2 text-white animated slideInDown mb-4">Event</h1>
+        </div>
+      </div>
+      <!-- Page Header End -->
+
+      <!-- Events Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px">
+            <h1 class="mb-3">Event</h1>
+          </div>
+          <div class="row g-4">
+            
+            {%for i in eventdata%}
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{{i.image.url}}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center flex-column">
+                      <h4>{{i.title|slice:":30"}}</h4>
+                      <p>
+                        {{i.conclusion|slice:":120"}}
+                      </p>
+                      <div class="mt-3 text-center w-100">
+                        <a class="butn" href="/event-single/{{i.id}}">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <small>{{i.date}} - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {%endfor%}
+            
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/event/2.webp'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center flex-column">
+                      <h4>Tech Conference</h4>
+                      <p>
+                        Bring together experts and enthusiasts to discuss the
+                        latest trends in technology, showcase innovati...
+                      </p>
+                      <div class="mt-3 text-center w-100">
+                        <a class="butn" href="">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <small>21 November, 2023 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="classes-item">
+                <div class="bg-light w-75 mx-auto p-3">
+                  <img class="img-fluid" src="{%static 'img/event/3.webp'%}" alt="" />
+                </div>
+                <div class="bg-light rounded p-4 pt-5 mt-n5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center flex-column">
+                      <h4>Art Exhibition</h4>
+                      <p>
+                        Celebrate local artists by organizing an art exhibition
+                        where they can display their work. Consider...
+                      </p>
+                      <div class="mt-3 text-center w-100">
+                        <a class="butn" href="">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary pt-2">
+                        <small>21 November, 2023 - by Admin</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- Events End -->
+
+     {%endblock%}
